@@ -1,0 +1,19 @@
+# Turn on URL rewriting
+RewriteEngine On
+# Installation directory
+RewriteBase /blog/
+# Protect application and system files from being viewed
+RewriteRule ^(_inc) - [F,L]
+# sem nechceme usera pustit!
+
+
+# Allow any files or directories that exist to be displayed directly
+#pokud linkujeme na nějaký adresář nebo soubor, který existuje, otevře se ten a nejde se na index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+
+# Rewrite all other URLs to index.php/
+RewriteRule .* index.php/$0 [PT,L] #cokoliv je za /blog/ přišpendli k index.php/...
+# index.php se tedy vždy na pozadí otevře, i když není v adrese

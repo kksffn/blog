@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/_inc/vendor/tamtamchik/simple-flash" />
+      <path value="$PROJECT_DIR$/_inc/vendor/composer" />
+      <path value="$PROJECT_DIR$/_inc/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/_inc/vendor/bjeavons/zxcvbn-php" />
+      <path value="$PROJECT_DIR$/_inc/vendor/google/recaptcha" />
+      <path value="$PROJECT_DIR$/_inc/vendor/phpauth/phpauth" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/_inc/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>

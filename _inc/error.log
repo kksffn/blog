@@ -1,0 +1,52 @@
+26 Jul 2020, 20:30
+------------------
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.tgers' doesn't exist in [ C:\laragon\www\blog\_inc\config.php ] 
+
+26 Jul 2020, 20:30
+------------------
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.tgers' doesn't exist in [ C:\laragon\www\blog\_inc\config.php ] 
+
+26 Jul 2020, 20:32
+------------------
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'htzui' in 'field list' in [ C:\laragon\www\blog\_inc\config.php : 55 ] 
+
+26 Jul 2020, 20:34
+------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cabbage' at line 1 in [ C:\laragon\www\blog\_inc\config.php : 55 ] 
+
+27 Jul 2020, 21:27
+------------------
+SQLSTATE[42000]: Syntax error or access violation: 1140 In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'blog.p.id'; this is incompatible with sql_mode=only_full_group_by in [ C:\laragon\www\blog\user.php : 11 ]
+
+27 Jul 2020, 21:27
+------------------
+SQLSTATE[42000]: Syntax error or access violation: 1140 In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'blog.p.id'; this is incompatible with sql_mode=only_full_group_by in [ C:\laragon\www\blog\home.php : 12 ] 
+
+27 Jul 2020, 21:27
+------------------
+SQLSTATE[42000]: Syntax error or access violation: 1140 In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'blog.p.id'; this is incompatible with sql_mode=only_full_group_by in [ C:\laragon\www\blog\home.php : 12 ] 
+
+3 Aug 2020, 21:55
+------------------
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist in [ C:\laragon\www\blog\home.php : 12 ] 
+
+3 Aug 2020, 21:56
+------------------
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist in [ C:\laragon\www\blog\home.php : 12 ] 
+
+3 Aug 2020, 21:58
+------------------
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist in [ C:\laragon\www\blog\home.php : 12 ] 
+
+3 Aug 2020, 21:58
+------------------
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.users' doesn't exist in [ C:\laragon\www\blog\home.php : 12 ] 
+
+23 Aug 2020, 17:35
+------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array GROUP BY p.id ORDER BY p.created_at DESC' at line 6 in [ C:\laragon\www\blog\tag.php : 12 ] 
+
+23 Aug 2020, 17:35
+------------------
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Array GROUP BY p.id ORDER BY p.created_at DESC' at line 6 in [ C:\laragon\www\blog\tag.php : 12 ] 
+
