@@ -1,13 +1,19 @@
+#Czenglish blog#
+
+Trochu větší projekt v rámci PHP kurzu. Cílem bylo vytvořit stránku - "blog".
+Šlo o to naučit se víc věcí, proto některé věci dělám různě a nedržím se jedné šablony. Není to OOP...
+
 1. Aby vše fungovalo, je potřeba nastavit blog/_inc/config.php:
-	- řádek 15: adresa domovské stránky BASE_URL
-	- řádky 28-35: údaje o DB
-	- řádek 26 - používám aktivaci přes email - SMTP je možné nastavit v DB (phpauth_config, řádky "smtp",....) nebo dát aktivaci na false, každopádně se lze přihlásit jako admin:
+	*řádek 15: adresa domovské stránky BASE_URL
+	*řádky 28-35: údaje o DB
+	*řádek 26 - používám aktivaci přes email - SMTP je možné nastavit v DB (phpauth_config, řádky "smtp",....) nebo dát aktivaci na false, každopádně se lze přihlásit jako admin:
 	nickname: ivo, heslo ivo123; přihlašovací údaje pro Edu (editor) a Fida (user) jsou v postech.
 
 2. Přes kompostér jsem natáhl a v app využívám
-	- tamtamchik (flash hlášky - doplněné v js, aby mizely a daly se odkřížkovat)
-	- phpauth (POZOR: trochu jsem upravil některé metody, které se týkaly přihlašování - mám v DB přidané sloupce)
-	- phpmailer
+	*tamtamchik (flash hlášky - doplněné v js, aby mizely a daly se odkřížkovat)
+	*phpauth (POZOR: trochu jsem upravil některé metody, které se týkaly přihlašování - mám v DB přidané sloupce)
+	*phpmailer
+	
 
 3. MySQL DB: blog/blog_220_08_24.sql
 
