@@ -4,20 +4,29 @@ Trochu větší projekt v rámci PHP kurzu. Cílem bylo vytvořit stránku - "bl
 Šlo o to naučit se víc věcí, proto některé věci dělám různě a nedržím se jedné šablony. Není to OOP...
 
 1. Aby vše fungovalo, je potřeba nastavit blog/_inc/config.php:
-	*řádek 15: adresa domovské stránky BASE_URL
-	*řádky 28-35: údaje o DB
-	*řádek 26 - používám aktivaci přes email - SMTP je možné nastavit v DB (phpauth_config, řádky "smtp",....) nebo dát aktivaci na false, každopádně se lze přihlásit jako admin:
+	- řádek 15: adresa domovské stránky BASE_URL
+	- řádky 28-35: údaje o DB
+	- řádek 26 - používám aktivaci přes email - SMTP je možné nastavit v DB (phpauth_config, řádky "smtp",....) nebo dát aktivaci na false, každopádně se lze přihlásit jako admin:
 	nickname: ivo, heslo ivo123; přihlašovací údaje pro Edu (editor) a Fida (user) jsou v postech.
 
 2. Přes kompostér jsem natáhl a v app využívám
-	*tamtamchik (flash hlášky - doplněné v js, aby mizely a daly se odkřížkovat)
-	*phpauth (POZOR: trochu jsem upravil některé metody, které se týkaly přihlašování - mám v DB přidané sloupce)
-	*phpmailer
-	
+	- tamtamchik (flash hlášky - doplněné v js, aby mizely a daly se odkřížkovat)
+	- phpauth (POZOR: trochu jsem upravil některé metody, které se týkaly přihlašování - mám v DB přidané sloupce)
+	- phpmailer
+	- (bjeavons a google recaptcha nevyužívám)
 
-3. MySQL DB: blog/blog_220_08_24.sql
-
-4. Úkol 13:
+3. Využívám MySQL DB: blog/blog_220_08_24.sql
+---
+4. index.php funguje jako jednoduchý router
+5. K připojení k DB používám PDO (nastavení v config.php)
+6. Stránka funguje jako "blog" - na homepage jsou vylistované všechny příspěvky s autory, daty, tagy, počtem zhlédnutí a komentářů. 
+Dají se zobrazit příspěvky podle autora, tagu. Dá se napsat nový post, editovat existující, vymazat existující. To umí admin, editor nebo autor.
+K postu se dá připojit do header background image.
+7. PHPAuth. Údaje o přihlášeném drží cookies. Různí uživatelé mají různá práva (admin, editor, user - ENUM v DB). Aktivace přes email.
+Uživatel může měnit svoje údaje, admin může dávat ban a měnit údaje všem, nemůže smazat posledního admina,...
+TODO: POKUD BUDE ADMIN MĚNIT PRÁVA DVĚMA ADMINŮM NAJEDNOU A ŽÁDNÝ NEZBYDE... 
+---
+8. Úkol 13:
 	a) tagy:admin může tagy editovat a přidávat přes formulář (_admin/tags-control.php - pro každý tag dva formuláře - edit, delete), post request vede na stránky 
 		_admin/add-tag.php, _admin/delete-tag.php nebo _admin/edit-tag.php. 
 		Zároveň přidaná obsluha pře js/ajax (po kliknutí na tag se na stránku přidá input s id a script(za to může metoda v assets/app.js), který obslouží editaci (assets/js/edit_tag.js)).. 
