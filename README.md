@@ -31,20 +31,15 @@ TODO: POKUD BUDE ADMIN MĚNIT PRÁVA DVĚMA ADMINŮM NAJEDNOU A ŽÁDNÝ NEZBYDE
 		_admin/add-tag.php, _admin/delete-tag.php nebo _admin/edit-tag.php. 
 		Zároveň přidaná obsluha pře js/ajax (po kliknutí na tag se na stránku přidá input s id a script(za to může metoda v assets/app.js), který obslouží editaci (assets/js/edit_tag.js)).. 
 		Nepřišel jsem na lepší řešení, než načíst další soubor se scriptem, který pozná, co bylo na stránce editováno...
-		
 		Při vkládání nebo editaci postu může autor naklikat existující tagy a/nebo napsat nové (input - oddělovač je čárka).
-		
 		_inc/functions-tag.php
 	
 	b) komentáře: nová tabulka v DB: comments navázaná na posts přes post_id; u článku je počet komentářů - vypsáni autoři a datum, komentář lze odeslat pomocí ctrl+enter, obsluha přes 
 		asssets/app.js. Komentáře jsem nedovolil mazat ani editovat, to mi nepřijde jako dobrý nápad v diskuzi... Komentáře jsou samozřejmě validované a sanitizované
-		
 		_inc/functions-comments.php
 	
 	c) přidávání obrázků do post-header: nová tabulka v DB: images navázan na posts. Původně jsem chtěl obsluhu obrázků udělat přes Intervention Image, nakonec jsem ale metody napsal sám. 
 		Při přidávání nebo editaci článku má user možnost uploadovat obrázek - max. 2MB, nahraje se do assets/img/post/{post_id} a udělá se záznam v DB, při změně obrázku se záznam updatuje
 		obrázků přidávám čísla přes pomlčku, aby nebyly dva soubory se stejným jménem.
-
-		V DB jsou přidané TRIGGERs - při smazání příspěvku se smažou záznamy v posts_tags, comments, images a složka s obrázky se vymaže z disku
- 
-		_inc/functions-image.php
+        V DB jsou přidané TRIGGERs - při smazání příspěvku se smažou záznamy v posts_tags, comments, images a složka s obrázky se vymaže z disku
+        _inc/functions-image.php
